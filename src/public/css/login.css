@@ -1,0 +1,43 @@
+.contenedor-form-buttom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;;
+
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  
+
+.container-nombreUsuario,.container-password,.boton-de-enviar{
+    width: 500px;
+    height: 50px;
+}
+
+.contraseña,.nombre-usuario{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+    color: #666;
+
+
+}
+
+.boton-de-enviar{
+    background-color: #666;
+    color: #ebebeb;
+    border: none;
+    border-radius: 6px;
+}
+
+.boton-de-enviar:hover{
+    background-color: #0022AA;
+    
+}
