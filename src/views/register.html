@@ -20,20 +20,24 @@
 
     <div class="conteiner-header">
     <div class="conteiner-header-top-bar">
-      <img src="img/logo-mercado-liebre.svg" class="logo">
+      <a href="/">
+        <img src="img/logo-mercado-liebre.svg" class="logo">
+      </a>
+      
 
       <form>
         <div class="buscador">
-        <input
-          type="search"
+          <input class="search"
+          type="text"
           placeholder="buscar productos, marcas"
-          style="color: gray"
-        />
-        <button>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
+          style="color: gray">
+           <button class="lupa">
+            <i class="fa-solid fa-magnifying-glass"></i>
+           </button>
+        </div>
       </form>
+
+      
     
 
       <h3 class="subtitulo-heder">
@@ -75,119 +79,138 @@
     </div>
   </header>
 
+  <main>
+    <form action="/" method="POST" class="createform">
+      <div class="control-formulario">
+        <input
+          type="text"
+          name="nombre-apellido"
+          placeholder="Nombre y Apellido"
+          class="control"
+        />
+        <input
+          type="text"
+          name="nombre-usuario"
+          placeholder="Nombre de Usuari@"
+          class="control"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="control"
+        />
+      </div>
 
-    <main>
+      <h3 class="titulo-formulario">Fecha de nacimiento</h3>
+      <input type="date" placeholder="Fecha de nacimiento" />
 
-
-
-      <form action="/" method="POST" class="createform">
-        <div class="control-formulario">
-          <input type="text" name="nombre-apellido" placeholder="Nombre y Apellido" class="control">
-          <input type="text" name="nombre-usuario" placeholder="Nombre de Usuari@" class="control">
-          <input type="email" name="email" placeholder="Email" class="control">
-          
-        </div>
-
-      <h3 class="title-formulario">Fecha de nacimiento</h3>
-        <input  type="date" placeholder="Fecha de nacimiento" max="2024-02-24">
-
-        <div class="control-formulario">
-          <input type="text" name="domicilio" placeholder="Domicilio" class="control">      
-        </div>
-        <h3 class="title-formulario">Perfil del Usuario</h3>
-        <div class="perfil-usuario">
-          <label for="comprador">Comprador
-              <input  type="radio"  name="perfil-comprador" >
-          </label>
-          <label for="comprador">Vendedor
-            <input  type="radio"  name="perfil-vendedor">
+      <div class="control-formulario">
+        <input
+          type="text"
+          name="domicilio"
+          placeholder="Domicilio"
+          class="control"
+        />
+      </div>
+      <h3 class="titulo-formulario">Perfil del Usuario</h3>
+      <div class="perfil-usuario">
+        <label for="comprador"
+          >Comprador
+          <input type="radio" name="perfil-comprador" />
         </label>
-    </div>
+        <label for="comprador"
+          >Vendedor
+          <input type="radio" name="perfil-vendedor" />
+        </label>
+      </div>
+
+      <h3 class="titulo-formulario">Intereses</h3>
+      <div class="intereses">
+        <label
+        >Electro
+        <input class="input" type="checkbox" />
+      </label>
+        <label
+          >Moda
+          <input class="input" type="checkbox" />
+        </label>
+        <label
+          >Hogar
+          <input class="input" type="checkbox" />
+        </label>
+        <label
+          >Jugueteria
+          <input class="input" type="checkbox" />
+        </label>
+        <label
+          >Vida Sana
+          <input class="input" type="checkbox" />
+        </label>
+       
+      </div>
+
+      <input class="subir-archivo" type="file" >
+
+      <div class="control-formulario">
+        <input
+          type="password"
+          name="contrasena"
+          placeholder="Contraseña"
+          class="control"
+        />
+        <input
+          type="password"
+          name="ConfirmarContrasena"
+          placeholder="Confirmar Contraseña"
+          class="control"
+        />
+      </div>
+
+      <div class="container-botones">
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+      </div>
+    </form>
+  </main>
 
 
 
-  <h3 class="title-formulario">Intereses</h3>
-  <div class="intereses">
-    <label>Electro
-        <input class="input" type="checkbox" >
-    </label>
-    <label>Moda
-      <input class="input" type="checkbox" >
-  </label>
-  <label>Hogar
-    <input class="input" type="checkbox" >
-</label>
-<label>Jugueteria
-  <input class="input" type="checkbox" >
-</label>
-<label>Vida Sana
-  <input class="input" type="checkbox" >
-</label>
-<label>Electro
-  <input class="input" type="checkbox" >
-</label>
-   
-</div>
-
-<div class="control-formulario">
-  <input type="password" name="contrasena" placeholder="Contraseña" class="control" >
-  <input type="password" name="ConfirmarContrasena" placeholder="Confirmar Contraseña" class="control" >
-   
-</div>
 
 
-
-
-  
-
-<div class="container-botones">
-  <button type="submit">Enviar</button>
-  <button type="reset">borrar</button>
-
-</div>
-
-
-
-
-
-      </form>
-  
-
-    </main>
-
-<footer>
-    <section>
-      <div class="footer-section">
+  <footer>
+    <section class="footer-section">
+      <article class="footer-article">
         <i class="fa-solid fa-credit-card"></i> 
         <h3>Pagá con tarjeta o en efectivo</h3>
-        <p>
-          Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
           efectivo en puntos de pago. ¡Y siempre es seguro!
         </p>
+      </article>
 
-        <i class="fa-solid fa-gift"></i>
-        <h3>Envío gratis desde $2.500</h3>
-        <p>
-          Solo por estar registrado en Mercado Liebre tenés envíos gratis en
+      <article class="footer-article">
+        <i class="fa-solid fa-gift"></i> 
+        <h3> Envío gratis desde $2.500</h3>
+        <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en
           miles de productos. Es un beneficio de Mercado Puntos.
         </p>
-
-        <i class="fa-solid fa-user-shield" ></i>
+      </article>
+     
+      <article class="footer-article">
+        <i class="fa-solid fa-user-shield"></i> 
         <h3>Seguridad, de principio a fin</h3>
-        <p>
-          ¿No te gusta? ¡Devuélvelo! En Mercado Liebre, no hay nada que no
+        <p> ¿No te gusta? ¡Devuélvelo! En Mercado Liebre, no hay nada que no
           puedas hacer, porque estás siempre protegido.
         </p>
-      </div>
-    </section>
+      </article>
     
-<div class="copyright">
-  <ul>
-      <h3>Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
-  </ul>
-</div>
-  </footer>
+    </section>
 
+    <div class="copyright">
+      <h3>Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
+    </div>
+    
+  </footer>
 
 </body>
 </html>

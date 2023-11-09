@@ -25,29 +25,39 @@ body {
   margin: auto;
   border-radius: 10px;
 }
-
 .logo {
-  width: 200px;
+  width: 50%;
 }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .subtitulo-heder {
   font-weight: 400;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .buscador {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+    width: 50%;
+   justify-content: flex-start;
+   
 }
 
+.search{
+  border: none;
+  padding: 5px;
+  width: 90%;
+  font-size: 15px;
+ 
+}
+ .lupa{
+  background-color: #fff;
+  border:none;
+  
+ }
 .navbar {
   display: none;
 }
@@ -66,7 +76,128 @@ body {
   font-size: 17px;
 }
 
-@media (min-width: 768px) {
+.banner {
+  margin: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin: auto;
+  width: 90%;
+}
+
+h2{
+  font-size: 24px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+
+.conteiner-productos{
+  background-color: var(--secundario);
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  
+ 
+}
+.descripcion{
+  display: flex;
+  flex-direction: column;
+}
+
+.img-producto{
+    width: 100%;
+}
+
+.info-prod{
+  background-color: white;
+  padding: 15px;
+  position: relative;
+  border-top: 1px solid #ebebeb;
+
+}
+
+.info-prod i {
+  width: 30px;
+  height: 30px;
+  border: solid 1px #39b54a;
+  color: #39b54a;
+  font-size: 16px;
+  background-color: #FFF;
+  padding: 5px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+.precio {
+  font-size: 18px;
+ width: 30%;
+}
+
+.descuento {
+  font-size: 16px;
+  color: #39b54a ;
+  width: 70%;
+}
+
+.nom-producto {
+  font-size: 16px;
+  margin-top: 10px;
+
+}
+
+.conteiner-infoproducto{
+  display: flex;
+    align-items: center;
+}
+
+.footer-section{
+  margin-top: 35px;
+  text-align: center;
+}
+
+.copyright{
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 15px;
+  padding: 15px ;
+}
+
+@media (min-width: 769px) {
+
+  .search, .lupa{
+    
+    font-size: 25px;
+   
+  }
+  .buscador {
+    display: flex;
+      width: auto;
+     justify-content: center;
+     
+  }
+
+  .logo{
+    width: 100%;
+    
+  }
+    
   .conteiner-header-top-bar {
     display: flex;
     justify-content: space-between;
@@ -90,9 +221,41 @@ body {
   .navbar li {
     margin: 0 5px;
   }
+
+  .conteiner-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+  .product {
+    width: 22%;
+    margin: 15px;
+
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+ 
+  .footer-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px 20px;
+    font-size: 20px;
+    
+  }
+  .footer-section i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #03264c;
+  }
+
+  .footer-article i:hover{
+    color: #f708ff;
+}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .conteiner-header-top-bar,
   .navbar {
     max-width: 1200px;
@@ -118,83 +281,7 @@ body {
   .navbar a {
     font-size: 19px;
   }
+  
 }
 
-.banner {
-  margin: auto;
-}
 
-.banner img {
-  width: 100%;
-  height: 100%;
-}
-
-main {
-  margin: auto;
-  width: 90vw;
-}
-
-.conteiner-productos img {
-  width: 100%;
-}
-.conteiner-productos {
-  flex-wrap: wrap;
-  display: flex;
-  margin-top: 10px;
-  justify-content: center;
-  gap: 10px;
-}
-
-.product {
-  display: flex;
-  margin-bottom: 10px;
-}
-.info-prod {
-  align-items: center;
-  background-color: white;
-  border-top: 1px solid #ebebeb;
-  padding: 15px;
-  list-style: none;
-  flex-wrap: wrap;
-  margin: 0;
-  padding-left: 10px;
-}
-
-.product p.precio {
-  font-size: 18px;
-}
-
-.product p.descuento {
-  font-size: 16px;
-}
-
-.product p.producto {
-  font-size: 16px;
-}
-.img-producto {
-  max-width: 100px;
-}
-
-.conteiner-productos {
-  background-color: #f6f6f6;
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-}
-
-footer {
-  background-color: white;
-  align-items: center;
-  padding: 20px;
-}
-
-.footer-section {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer-section i {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #03264c;
-}
